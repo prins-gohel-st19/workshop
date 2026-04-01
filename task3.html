@@ -1,0 +1,37 @@
+<!--
+    Task 3: Generator Task Tracker
+
+Create a program that uses a generator to give one task at a time
+and allows marking tasks done or counting them.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function* generateSequence() {
+            yield "Task 1";
+            yield "Task 2";
+            yield "Task 3";
+            return;
+        }
+
+        let generator = generateSequence();
+        let one = generator.next();
+        let two = generator.next();
+        let three = generator.next();
+        let four = generator.next();
+
+        console.log(JSON.stringify(one));
+        console.log(JSON.stringify(two));
+        console.log(JSON.stringify(three));
+        console.log(JSON.stringify(four));
+    </script>
+</body>
+</html>

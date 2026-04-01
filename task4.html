@@ -1,0 +1,30 @@
+<!--
+    Task 4: Dynamic Webpage Theme Changer
+
+Allow users to change the look and feel (theme) of a webpage dynamically using their interactions, such as clicking a button or toggling a switch.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Dark mode</button>
+    <button id="btn2">Light mode</button>
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        btn1.addEventListener('click', () => {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+        });
+        btn2.addEventListener('click', () => {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+        });
+
+    </script>
+</body>
+</html>

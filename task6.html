@@ -1,0 +1,32 @@
+<!--
+    Task 6: Simple Random Joke Fetcher
+
+Fetch a random joke from an API and show it on the page when the button is clicked.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="jokeBtn">Get a Joke</button>
+    <div id="jokeOutput"></div>
+
+    <script>
+        const jokeBtn = document.getElementById('jokeBtn');
+        const jokeOutput = document.getElementById('jokeOutput');
+
+        jokeBtn.addEventListener('click', async () => {
+            try {
+                const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+                const joke = await response.json();
+                jokeOutput.textContent = `${joke.setup} - ${joke.punchline}`;
+            } catch (error) {
+                jokeOutput.textContent = 'Failed to fetch a joke. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!--
+    Task 5: Counter with Buttons
+
+Create a simple counter application where a number displayed on the screen can be increased or decreased by user interaction (clicking buttons).-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="inc">increase</button> <br> <br>
+     <div id="output"> 0 </div> <br>
+    <button id="dsc">decrease</button>
+   
+    <script>
+        let count = 0;
+        
+        let inc = document.getElementById("inc");
+        let dsc = document.getElementById("dsc");
+        let output = document.getElementById("output");
+
+        inc.addEventListener('click', ()=> {
+            count++;
+            output.textContent = count;
+        });
+
+        dsc.addEventListener('click', ()=> {
+            count--;
+            output.textContent = count;
+        });
+    </script>
+</body>
+</html>

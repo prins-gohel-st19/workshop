@@ -1,0 +1,29 @@
+<!--
+    Task 2: Async Greeting with User Data
+
+Use a promise to simulate fetching user data asynchronously and async/await to wait for the result and display it after the greeting.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        async function greet() {
+            let promise =   new Promise((resolve, reject) => {
+                setTimeout( () => resolve ("Hello after 2 second!"),2000)
+            });
+
+            let result = await promise;
+
+            console.log(result);
+        }
+
+        greet();
+    </script>
+</body>
+</html>
